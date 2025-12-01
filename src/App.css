@@ -122,7 +122,7 @@
 .auth-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: var(--space-lg);
   padding: var(--space-xl) 0;
   animation: fadeIn 0.3s ease;
@@ -132,6 +132,124 @@
   font-size: 1rem;
   color: var(--color-text-secondary);
   text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+/* Email Auth Form */
+.email-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.auth-input {
+  width: 100%;
+  padding: var(--space-md);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px hsla(210, 100%, 50%, 0.1);
+}
+
+.auth-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+/* Error Message */
+.error-message {
+  font-size: 0.875rem;
+  color: hsl(0, 70%, 50%);
+  background: hsl(0, 70%, 97%);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(0, 70%, 90%);
+  margin: 0;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Auth Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin: var(--space-sm) 0;
+  color: var(--color-text-tertiary);
+  font-size: 0.875rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Google Button */
+.google-button {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  transition: all 0.2s ease;
+}
+
+.google-button:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.google-button:active {
+  transform: translateY(0);
+}
+
+/* Auth Toggle */
+.auth-toggle {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.toggle-link {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.toggle-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.toggle-link:active {
+  color: var(--color-primary);
 }
 
 /* Loading State */
